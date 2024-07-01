@@ -45,7 +45,7 @@ const KanbanBoard = ({ initialTasks }) => {
               handleStageChange={handleStageChange}
               tasks={tasks}
               i={i}
-              key={i}
+              key={StageNames[i]}
             />
           ))}
         </div>
