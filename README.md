@@ -8,6 +8,8 @@ Kanban is a popular workflow used in task management, project management, issue 
 
 ### Screen recording
 
+https://github.com/Lunnatica/kanban_board_react/assets/4697967/3bb4d810-caa8-45bd-813c-6f855ad07178
+
 
 ## Implementation details
 
