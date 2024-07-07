@@ -18,3 +18,7 @@ The component must have the following functionalities:
 - Each task has 2 properties:
   - name: The name of task. This is the unique identification for every task. [STRING]
   - - stage: The stage of the task. [NUMBER] (0 represents the 'Backlog' stage, 1 represents the 'To Do' stage, 2 represents the 'Ongoing' stage, and 3 represents the 'Done' stage)
+   
+# Pending TODO:
+
+- Drag and drop functionality (currently WIP)
