@@ -9,8 +9,8 @@ import StyledComponentsRegistry from "../lib/registry";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "name-app",
-  description: "name-app",
+  title: "Kanban Board React",
+  description: "Kanban Board React App",
 };
 
 export default function RootLayout({
