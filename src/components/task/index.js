@@ -1,15 +1,14 @@
 import { StageNames } from "../kanban-board";
 import { useDrag } from "react-dnd";
 
-export const Task = ({ task, index, handleStageChange, stage }) => {
+export const Task = ({ task, handleStageChange }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "task",
     item: task,
     end: (item, monitor) => {
       const result = monitor.getDropResult();
-      if (item && result.stage) {
-        console.log(item, result.stage);
-        handleStageChange(task, result.stage);
+      if (item && result) {
+        handleStageChange(item, result.stage);
       }
     },
   }));

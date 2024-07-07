@@ -33,5 +33,4 @@ The component has the following functionalities:
 
 # Pending TODO:
 
-- Drag and drop functionality (currently WIP)
 - Use typescript for task, stage and kanban-board
