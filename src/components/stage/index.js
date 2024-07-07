@@ -15,7 +15,7 @@ export const Stage = ({ handleStageChange, tasks, i }) => {
         <ul className="styled mt-50" data-testid={`stage-${i}`}>
           {tasks.map((task, index) => (
             <Task
-              key={task.id}
+              key={`stage-${i}-${task.id}`}
               task={task}
               index={index}
               handleStageChange={handleStageChange}

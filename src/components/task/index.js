@@ -15,7 +15,7 @@ export const Task = ({ task, index, handleStageChange, stage }) => {
   }));
 
   return (
-    <li ref={drag} className="slide-up-fade-in" key={`${stage}${index}`}>
+    <li ref={drag} className="slide-up-fade-in">
       <div className="li-content layout-row justify-content-between align-items-center">
         <span data-testid={`${task.name.split(" ").join("-")}-name`}>
           {task.name}
