@@ -2,12 +2,21 @@
 
 Kanban is a popular workflow used in task management, project management, issue tracking, and other similar purposes. The workflow is usually visualized using a Kanban Board.
 
-Create a Kanban Board component with tasks, where each task consists of a name only, as shown below:
+## Demo 
+### Live demo
+[Live demo URL](https://kanban-board-react-two.vercel.app/)
+
+### Screen recording
+
+
+## Implementation details
+
+Kanban Board component with tasks, where each task consists of a name only, as shown below:
 
 - 10 tasks in 4 columns named backlog, todo, ongoing, done.
 - Left and right arrows to move tasks between columns.
 
-The component must have the following functionalities:
+The component has the following functionalities:
 
 - The component board contains 4 stages of tasks in the sequence 'Backlog', 'To Do', 'Ongoing', and 'Done'.
 - An array of tasks is passed as a prop to the component.
