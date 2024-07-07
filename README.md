@@ -2,14 +2,15 @@
 
 Kanban is a popular workflow used in task management, project management, issue tracking, and other similar purposes. The workflow is usually visualized using a Kanban Board.
 
-## Demo 
+## Demo
+
 ### Live demo
+
 [Live demo URL](https://kanban-board-react-two.vercel.app/)
 
 ### Screen recording
 
 https://github.com/Lunnatica/kanban_board_react/assets/4697967/3bb4d810-caa8-45bd-813c-6f855ad07178
-
 
 ## Implementation details
 
@@ -29,7 +30,8 @@ The component has the following functionalities:
 - Each task has 2 properties:
   - name: The name of task. This is the unique identification for every task. [STRING]
   - - stage: The stage of the task. [NUMBER] (0 represents the 'Backlog' stage, 1 represents the 'To Do' stage, 2 represents the 'Ongoing' stage, and 3 represents the 'Done' stage)
-   
+
 # Pending TODO:
 
 - Drag and drop functionality (currently WIP)
+- Use typescript for task, stage and kanban-board
