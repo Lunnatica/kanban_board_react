@@ -1,9 +1,21 @@
+import React from "react";
 import { useDrop } from "react-dnd";
-import { StageNames } from "../kanban-board";
+
+import { StageNames, Task as TaskInterface } from "../../types/types";
 import { Task } from "../task";
 
-export const Stage = ({ handleStageChange, tasks, i }) => {
-  const [{ canDrop, isOver }, drop] = useDrop(() => ({
+interface StageProps {
+  handleStageChange: (task: TaskInterface, newStage: number) => void;
+  tasks: TaskInterface[];
+  i: number;
+}
+
+export const Stage: React.FC<StageProps> = ({
+  handleStageChange,
+  tasks,
+  i,
+}) => {
+  const [, drop] = useDrop(() => ({
     accept: "task",
     drop: () => ({ stage: i }),
   }));
@@ -13,13 +25,11 @@ export const Stage = ({ handleStageChange, tasks, i }) => {
       <div className="card-text">
         <h4>{StageNames[i]}</h4>
         <ul className="styled mt-50" data-testid={`stage-${i}`}>
-          {tasks.map((task, index) => (
+          {tasks.map((task) => (
             <Task
-              key={`stage-${i}-${task.id}`}
+              key={`stage-${i}-${task.name}`}
               task={task}
-              index={index}
               handleStageChange={handleStageChange}
-              stage={i}
             />
           ))}
         </ul>

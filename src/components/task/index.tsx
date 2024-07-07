@@ -1,12 +1,19 @@
-import { StageNames } from "../kanban-board";
 import { useDrag } from "react-dnd";
 
-export const Task = ({ task, handleStageChange }) => {
-  const [{ isDragging }, drag] = useDrag(() => ({
+import { StageNames, Task as TaskInterface } from "../../types/types";
+
+interface TaskProps {
+  task: TaskInterface;
+  handleStageChange: (task: TaskInterface, newStage: number) => void;
+}
+
+export const Task: React.FC<TaskProps> = ({ task, handleStageChange }) => {
+  const [, drag] = useDrag(() => ({
     type: "task",
     item: task,
     end: (item, monitor) => {
-      const result = monitor.getDropResult();
+      const result = monitor.getDropResult<TaskInterface>();
+      console.log({ item, result });
       if (item && result) {
         handleStageChange(item, result.stage);
       }
