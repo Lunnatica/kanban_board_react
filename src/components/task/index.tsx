@@ -11,13 +11,6 @@ export const Task: React.FC<TaskProps> = ({ task, handleStageChange }) => {
   const [, drag] = useDrag(() => ({
     type: "task",
     item: task,
-    end: (item, monitor) => {
-      const result = monitor.getDropResult<TaskInterface>();
-      console.log({ item, result });
-      if (item && result) {
-        handleStageChange(item, result.stage);
-      }
-    },
   }));
 
   return (

@@ -24,12 +24,13 @@ const KanbanBoard: React.FC<{ initialTasks: Task[] }> = ({ initialTasks }) => {
   );
 
   const handleStageChange = (task: Task, nextStage: number) => {
-    const newStagesTasks = [...stagesTasks];
-    newStagesTasks[nextStage].push({ ...task, stage: nextStage });
-    newStagesTasks[task.stage] = newStagesTasks[task.stage].filter(
-      (item) => item.name !== task.name
-    );
-    setStagesTasks(newStagesTasks);
+    setStagesTasks((prev) => {
+      const newStagesTasks = prev.map((stage) =>
+        stage.filter((item) => item.name !== task.name)
+      );
+      newStagesTasks[nextStage].push({ ...task, stage: nextStage });
+      return newStagesTasks;
+    });
   };
 
   return (

@@ -17,7 +17,7 @@ export const Stage: React.FC<StageProps> = ({
 }) => {
   const [, drop] = useDrop(() => ({
     accept: "task",
-    drop: () => ({ stage: i }),
+    drop: (item: TaskInterface) => handleStageChange(item, i),
   }));
 
   return (
