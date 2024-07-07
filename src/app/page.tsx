@@ -21,7 +21,7 @@ const tasks = [
 export default function Home() {
   return (
     <>
-      <Header title={title}></Header>
+      <Header />
       <KanbanBoard initialTasks={tasks} />
     </>
   );
